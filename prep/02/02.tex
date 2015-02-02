@@ -11,7 +11,13 @@
 \]
 \[ P_1(s) = \frac{\Omega(s)}{U(s)} 
     = \frac{\frac{K}{JR}}{s + \frac{1}{J} \cdot \left(\alpha + \frac{K^2}{R}\right)}
+    = \frac{\frac{K}{\alpha \cdot R + K^2}}{\frac{J}{\alpha + \frac{K^2}{R}} \cdot s + 1}
+    = \frac{\frac{K}{\alpha \cdot R + K^2}}{\frac{J \cdot R}{\alpha \cdot R + K^2} \cdot s + 1}
+    = \frac{K_G}{\tau \cdot s + 1}
 \]
 \[ P_2(s) = \frac{\Omega(s)}{\Gamma(s)}
     = \frac{-\frac{1}{J}}{s + \frac{1}{J} \cdot \left(\alpha + \frac{K^2}{R}\right)}
+    = \frac{-\frac{R}{\alpha \cdot R + K^2}}{\frac{J \cdot R}{\alpha \cdot R + K^2} \cdot s + 1}
+    = \frac{-\frac{R}{K} \cdot \frac{K}{\alpha \cdot R + K^2}}{\frac{J \cdot R}{\alpha \cdot R + K^2} \cdot s + 1}
+    = \frac{-\frac{R}{K} \cdot K_G}{\tau \cdot s + 1}
 \]
