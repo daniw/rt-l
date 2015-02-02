@@ -1,1 +1,24 @@
 \section{Teilaufgabe 9}
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}[node distance=2.0cm]
+        \node (soll)    []                                  {$\Omega_r(s)$};
+        \node (diff)    [sumpoint, right of=soll]           {};
+        \node (control) [controlblock, right of=diff]       {$C(s)$};
+        \node (path1)   [controlblock, right of=control]    {$P_1(s)$};
+        \node (sum)     [sumpoint, right of=path1]          {};
+        \node (feedback)[crosspoint, right of=sum]          {};
+        \node (ist)     [right of=feedback]                 {$\Omega(s)$};
+        \node (moment)  [above of=control]                  {$\Gamma(s)$};
+        \node (path2)   [controlblock, right of=moment]     {$P_2(s)$};
+        \draw[thick, ->] (soll)     -- (diff) node[above left] {$+$};;
+        \draw[thick, ->] (diff)     -- (control);
+        \draw[thick, ->] (control)  -- (path1);
+        \draw[thick, ->] (path1)    -- (sum) node[below left] {$+$};
+        \draw[thick, ->] (sum)      -- (ist);
+        \draw[thick, ->] (moment)   -- (path2);
+        \draw[thick, ->] (path2)    -| (sum) node[above right] {$+$};
+        \draw[thick, ->] (feedback) |- ++(0, -1.5cm) -| (diff) node[below right] {$-$};
+    \end{tikzpicture}
+    \caption{Blockschaltbild Steuerung}
+\end{figure}
