@@ -1,1 +1,30 @@
 \section{Teilaufgabe 27}
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}[node distance=2.0cm]
+        \node (soll)    []                                  {$\Omega_r(s)$};
+        \node (in)      [crosspoint, right of=soll]         {};
+        \node (diff)    [sumpoint, right of=in]             {};
+        \node (control) [controlblock, right of=diff]       {$C(s)$};
+        \node (sum1)    [sumpoint, right of=control]         {};
+        \node (path1)   [controlblock, right of=sum1]       {$P_1(s)$};
+        \node (sum2)    [sumpoint, right of=path1]          {};
+        \node (feedback)[crosspoint, right of=sum2]         {};
+        \node (ist)     [right of=feedback]                 {$\Omega(s)$};
+        \node (path2)   [controlblock, above of=sum2]       {$P_2(s)$};
+        \node (moment)  [above of=path2]                    {$\Gamma(s)$};
+        \node (forward) [controlblock, above of=control]    {$F(s)$};
+        \draw[thick, ->] (soll)     -- (diff) node[above left] {$+$};;
+        \draw[thick, ->] (diff)     -- (control);
+        \draw[thick, ->] (control)  -- (sum1) node[below left] {$+$};
+        \draw[thick, ->] (sum1)     -- (path1);
+        \draw[thick, ->] (path1)    -- (sum2) node[below left] {$+$};
+        \draw[thick, ->] (sum2)     -- (ist);
+        \draw[thick, ->] (moment)   -- (path2);
+        \draw[thick, ->] (path2)    -- (sum2) node[above right] {$+$};
+        \draw[thick, ->] (feedback) |- ++(0, -1.5cm) -| (diff) node[below right] {$-$};
+        \draw[thick, ->] (in)       |- (forward);
+        \draw[thick, ->] (forward)  -| (sum1) node[above right] {$+$};
+    \end{tikzpicture}
+    \caption{Blockschaltbild Regelung}
+\end{figure}
