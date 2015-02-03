@@ -7,14 +7,14 @@
         \node (path1)   [controlblock, right of=control]    {$P_1(s)$};
         \node (sum)     [sumpoint, right of=path1]          {};
         \node (ist)     [right of=sum]                      {$\Omega(s)$};
-        \node (moment)  [above of=control]                  {$\Gamma(s)$};
-        \node (path2)   [controlblock, right of=moment]     {$P_2(s)$};
+        \node (path2)   [controlblock, above of=sum]        {$P_2(s)$};
+        \node (moment)  [above of=path2]                    {$\Gamma(s)$};
         \draw[thick, ->] (soll)     -- (control);
         \draw[thick, ->] (control)  -- (path1);
         \draw[thick, ->] (path1)    -- (sum) node[below left] {$+$};
         \draw[thick, ->] (sum)      -- (ist);
         \draw[thick, ->] (moment)   -- (path2);
-        \draw[thick, ->] (path2)    -| (sum) node[above right] {$+$};
+        \draw[thick, ->] (path2)    -- (sum) node[above right] {$+$};
     \end{tikzpicture}
     \caption{Blockschaltbild Steuerung}
 \end{figure}
