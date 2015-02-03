@@ -1,1 +1,13 @@
 \section{Teilaufgabe 14}
+Führungsübertragungsfunktion: 
+\[ G_F(s) 
+    = \frac{\frac{K_p \cdot K_g}{\tau \cdot s + 1}}
+        {1 + \frac{K_p \cdot K_g}{\tau \cdot s + 1}}
+    = \frac{K_p \cdot K_g}{\tau \cdot s + 1 + K_p \cdot K_g}
+\]
+Störübertragungsfunktion:
+\[ G_S(s)
+    = \frac{\frac{-\frac{R}{K} \cdot K_g}{\tau \cdot s + 1}}
+        {1 + \frac{K_p \cdot K_g}{\tau \cdot s + 1}}
+    = \frac{-\frac{R}{K} \cdot K_g}{\tau \cdot s + 1 + K_p \cdot K_g}
+\]
