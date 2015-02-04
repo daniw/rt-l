@@ -263,30 +263,6 @@
 
     %\fancyhead[R]{\includegraphics[scale=0.25]{../fig/hslu_logo2.PNG}}
 
-% Eigene Titelseite
-%%% Not working because \@title does not work in .sty file!
-%    \newcommand\prentitle{
-%        \begin{titlepage}
-%            \begin{center}
-%                \makeatletter
-%                \@title
-%                \makeatother
-%                Titel \\
-%                Team 27 \\
-%                Yannik Küng \\
-%                Andriu Maissen \\
-%                Daniel Mathis \\
-%                Simon Neidhart \\
-%                Peter Kounen \\
-%                Kevin Wespi \\
-%                Daniel Winz \\
-%                Hochschule Luzern \\
-%                Technik \& Architektur \\
-%                Produktentwicklung 1 \\
-%                Betreuender Dozent: \\
-%                Marco De Angelis \\
-%                Git revision: 
-%                \input{../../.git/ORIG_HEAD}
-%            \end{center}
-%        \end{titlepage}
-%    }
+% Eigene Umgebungen
+    % Umgebung für Aufgabenstellung
+    \newenvironment{aufgabe}{\color{blue}}{\ignorespacesafterend}
