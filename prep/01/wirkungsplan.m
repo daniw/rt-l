@@ -9,5 +9,6 @@ Kg = K / (K*K + a*R);
 sim('wirkungsplan_mdl.slx');
 
 plot(omega.time, omega.signals.values);
+title('Modell Gleichstrommotor');
 
 print '-dpdf' 'wirkungsplan_plot.pdf';

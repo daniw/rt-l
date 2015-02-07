@@ -12,20 +12,24 @@ Kp = 0.1
 sim('regler_diff_mdl.slx');
 subplot(2,2,1);
 plot(omega.time, omega.signals.values);
+title('Kp = 0.1');
 
 Kp = 1
 sim('regler_diff_mdl.slx');
 subplot(2,2,2);
 plot(omega.time, omega.signals.values);
+title('Kp = 1');
 
 Kp = 10
 sim('regler_diff_mdl.slx');
 subplot(2,2,3);
 plot(omega.time, omega.signals.values);
+title('Kp = 10');
 
 Kp = 100
 sim('regler_diff_mdl.slx');
 subplot(2,2,4);
 plot(omega.time, omega.signals.values);
+title('Kp = 100');
 
 print '-dpdf' 'regler_diff_plot.pdf';

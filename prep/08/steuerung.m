@@ -10,24 +10,24 @@ mmax = 0;
 Kg_s = Kg;
 
 sim('steuerung_mdl.slx');
-
 subplot(2,2,1);
 plot(omega.time, omega.signals.values);
+title('normal');
 
 mmax = 0.03;
 Kg_s = Kg;
 
 sim('steuerung_mdl.slx');
-
 subplot(2,2,3);
 plot(omega.time, omega.signals.values);
+title('Lastmoment');
 
 mmax = 0;
 Kg_s = 0.9*Kg;
 
 sim('steuerung_mdl.slx');
-
 subplot(2,2,4);
 plot(omega.time, omega.signals.values);
+title('Faktor Kg unterschiedlich');
 
 print '-dpdf' 'steuerung_plot.pdf';

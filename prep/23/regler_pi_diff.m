@@ -13,5 +13,6 @@ Ti = tau
 
 sim('regler_pi_diff_mdl.slx');
 plot(omega.time, omega.signals.values);
+title('');
 
 print '-dpdf' 'regler_pi_diff_plot.pdf';

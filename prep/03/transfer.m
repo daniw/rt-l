@@ -9,5 +9,6 @@ Kg = K / (K*K + a*R);
 sim('transfer_mdl.slx');
 
 plot(omega.time, omega.signals.values);
+title('Übertragungsfunktion');
 
 print '-dpdf' 'transfer_plot.pdf';
