@@ -12,3 +12,22 @@
     der grossen Limitierung einer einfachen Steuerung im Vergleich zu einer 
     Regelung.
 \end{aufgabe}
+\[ P_1(s) = \frac{K_g}{\tau \cdot s + 1} \]
+Somit ist ${P_1}^{-1}$:
+\[ {P_1}^{-1}(s) = \frac{\tau}{K_g} \cdot s + \frac{1}{K_g} \]
+Ein idealer Differenzierer kann nicht realisiert werden. 
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.6\textwidth]{08/steuerung.pdf}
+    \caption{Steuerung in Simulink}
+    \label{fig:03}
+\end{figure}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.6\textwidth]{08/steuerung_plot.pdf}
+    \caption{Simulationsergebnis}
+    \label{fig:08plot}
+\end{figure}
+\\
+Stimmen Steuerung und Strecke nicht zusammen, ergibt sich eine Abweichung 
+von der Solldrehzahl. Störungen können nicht kompensiert werden. 
