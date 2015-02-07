@@ -17,3 +17,26 @@
     = 1 - 1 - \frac{1}{1 + K_p \cdot K_g}
     = -\frac{1}{1 + K_p \cdot K_g}
 \]
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.6\textwidth]{16/regler_diff.pdf}
+    \caption{Regler in Simulink}
+    \label{fig:15}
+\end{figure}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.6\textwidth]{16/regler_diff_plot.pdf}
+    \caption{Simulationsergebnis}
+    \label{fig:15plot}
+\end{figure}
+\begin{table}[h!]
+    \centering
+    \begin{zebratabular}{ll}
+        \rowcolor{gray}
+        $K_p$   & $e(\infty)$ \\
+        0.1     & 0.3750 \\
+        1       & 0.0566 \\
+        10      & 0.00596 \\
+        100     & 0.00059964 \\
+    \end{zebratabular}
+\end{table}
