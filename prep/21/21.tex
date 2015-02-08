@@ -3,3 +3,60 @@
     Für diesen Fall, lesen Sie aus dem Bode-Diagramm des offenen Regelkreises 
     die Stabilitätsreserve.
 \end{aufgabe}
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}[scale=1]
+        \begin{semilogxaxis}
+            [xmin=1e-2, 
+                xmax=1e3, 
+                ymin=-60, 
+                ymax=60, 
+                ytick={-60, -40, ..., 60}, 
+                xlabel=Kreisfrequenz (rad/s),
+                ylabel=Amplitudengang (dB),
+                grid=both]
+            \addplot[mark=none, color=red, ultra thick] coordinates 
+                {(0.002398,94.420) 
+                (2398,-25.57)};
+            \addplot[mark=none, color=green] coordinates 
+                {(0.002398,70.000) 
+                (23.98,-10.000) 
+                (2398,-10.000)};
+            \addplot[mark=none, color=blue] coordinates 
+                {(0.002398,24.430) 
+                (23.98,24.430) 
+                (2398,-15.57)};
+        \end{semilogxaxis}
+    \end{tikzpicture}
+    \\
+    \begin{tikzpicture}[scale=1]
+        \begin{semilogxaxis}
+            [xmin=1e-2, 
+                xmax=1e3, 
+                ymin=-270, 
+                ymax=180, 
+                ytick={-270, -225, ..., 180}, 
+                xlabel=Kreisfrequenz (rad/s),
+                ylabel=Phasengang ($^\circ$),
+                grid=both]
+            \addplot[mark=none, color=red, ultra thick] coordinates 
+                {(0.002398,-90) 
+                (2398,-90)};
+            \addplot[mark=none, color=green] coordinates 
+                {(0.002398,-90) 
+                (2.398,-90) 
+                (239.8,0) 
+                (2398.,0)};
+            \addplot[mark=none, color=blue] coordinates 
+                {(0.002398,0) 
+                (2.398,0) 
+                (239.8,-90) 
+                (2398,-90)};
+        \end{semilogxaxis}
+    \end{tikzpicture}
+\end{figure}
+\\
+\tikz{\draw[blue]               (0,0) -- (1,0);} $PT_1$ Strecke \\
+\tikz{\draw[green]              (0,0) -- (1,0);} $PI$ Regler \\
+\tikz{\draw[red, ultra thick]   (0,0) -- (1,0);} Regler und Strecke \\
+\[ \varphi_r = 90 \qquad A_r = \infty \]
