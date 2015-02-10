@@ -1,2 +1,69 @@
 \section{Linearisierung}
+\[
+\begin{array}{@{~}l@{~}l@{~}}
+A_T \cdot \frac{d~h_2}{d~t} 
+    &= Q_2 
+    + \alpha_{32} \cdot A_v \cdot \sign(h3-h2) 
+    \cdot \sqrt{|2 \cdot g \cdot (h_3 - h_2)|}
+    - Q_{l,2}
+    - {Q'}_{l,2} \\\\
 
+    &= Q_2 
+    + \underbrace{\alpha_{32} \cdot A_v \cdot \sign(h3-h2) 
+    \cdot \sqrt{|2 \cdot g \cdot (h_3 - h_2)|}}
+    _{\alpha_{32} = 0 \rightarrow 0} 
+    - \alpha_{2} \cdot A_L \cdot \sqrt{2 \cdot g \cdot h_2}
+    - \alpha_{22} \cdot A_V \cdot \sqrt{2 \cdot g \cdot h_2} \\\\
+
+    &= Q_2 
+    - \alpha_{2} \cdot A_L \cdot \sqrt{2 \cdot g \cdot h_2}
+    - \alpha_{22} \cdot A_V \cdot \sqrt{2 \cdot g \cdot h_2} \\\\
+
+    &= Q_2 - \sqrt{h_2} \cdot \sqrt{2 \cdot g} \cdot 
+    (\alpha_2 \cdot A_L + \alpha_{22} \cdot A_V)) \\\\
+\end{array}
+\]
+Linearisierung: 
+\[
+\begin{array}{@{~}l@{~}l@{~}l@{~}}
+    A_T \cdot \frac{d~h_2}{d~t} 
+    &=& Q_2 
+    - \left. \frac{\partial f}{\partial h_2} \right\rvert_{\bar{h_2}} \cdot \Delta h_2
+    - \left. \frac{\partial f}{\partial \alpha_{2}} \right\rvert_{\bar{\alpha_{2}}} \cdot \Delta \alpha_{2}
+    - \left. \frac{\partial f}{\partial \alpha_{22}} \right\rvert_{\bar{\alpha_{22}}} \cdot \Delta \alpha_{22} \\
+
+    &=& Q2 \\
+    & & - (h_2 - \bar{h_2}) \cdot \sqrt{2 \cdot g} \cdot (\bar{\alpha_2} \cdot A_L + \bar{\alpha_{22}} \cdot A_V) \\
+    & & - (\alpha_2 - \bar{\alpha_2}) \cdot \bar{h_2} \cdot \sqrt{2 \cdot g} \cdot A_L \\
+    & & - (\alpha_{22} - \bar{\alpha_{22}}) \cdot \bar{h_2} \cdot \sqrt{2 \cdot g} \cdot A_V \\
+
+    &=& Q2 \cdot \sqrt{2 \cdot g} \cdot ( \\
+    & & - (h_2 - \bar{h_2}) \cdot (\bar{\alpha_2} \cdot A_L + \bar{\alpha_{22}} \cdot A_V) \\
+    & & - (\alpha_2 - \bar{\alpha_2}) \cdot \bar{h_2} \cdot A_L \\
+    & & - (\alpha_{22} - \bar{\alpha_{22}}) \cdot \bar{h_2} \cdot A_V ) \\
+\end{array}
+\]
+Laplace Transformation: 
+\[ h_2          \laplace Y(s) \]
+\[ Q_2          \laplace Y(s) \]
+\[ \alpha_2     \laplace Y(s) \]
+\[ \alpha_{22}  \laplace Y(s) \]
+\[ A_T \cdot Y(s) \cdot s = U(s) 
+    - Y(s)   \cdot \left(\sqrt{2 \cdot g} \cdot (\bar{\alpha_2} \cdot A_L + \bar{\alpha_{22}} \cdot A_V)\right)
+    - V_1(s) \cdot \left(\sqrt{2 \cdot g} \cdot \bar{h_2} \cdot A_L\right)
+    - V_2(s) \cdot \left(\sqrt{2 \cdot g} \cdot \bar{h_2} \cdot A_V\right)
+\]
+Übertragungsfunktion: 
+\[ G_{YU}(s) = \frac{Y(s)}{U(s)} \]
+\[ \left(A_T \cdot s 
+    + \sqrt{2 \cdot g} \cdot (\bar{\alpha_2} \cdot A_L + \bar{\alpha_{22}} \cdot A_V)\right) \cdot Y(s) = U(s) 
+\]
+\[ \frac{Y(s)}{U(s)} 
+    = \frac{1}{A_T \cdot s + 
+    \sqrt{2 \cdot g} \cdot (\bar{\alpha_2} \cdot A_L + \bar{\alpha_{22}} \cdot A_V)}
+    = \frac{\frac{1}{\sqrt{2 \cdot g} \cdot (\bar{\alpha_2} \cdot A_L + \bar{\alpha_{22}} \cdot A_V)}}
+    {\frac{A_T}{\sqrt{2 \cdot g} \cdot (\bar{\alpha_2} \cdot A_L + \bar{\alpha_{22}} \cdot A_V)} \cdot s + 1}
+    = \frac{K_g}{\tau \cdot s + 1}
+\]
+\[ \to K_g = \frac{1}{\sqrt{2 \cdot g} \cdot (\bar{\alpha_2} \cdot A_L + \bar{\alpha_{22}} \cdot A_V)} \]
+\[ \to \tau = \frac{A_T}{\sqrt{2 \cdot g} \cdot (\bar{\alpha_2} \cdot A_L + \bar{\alpha_{22}} \cdot A_V)} \]
