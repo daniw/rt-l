@@ -1,8 +1,12 @@
 \section{Dimensionierung PID Regler nach Kuhn}
 Die PID-Reglereinstellung nach Kuhn gibt die folgende Auslegung vor
-\[ K_p = \frac{2}{K_s} \qquad ,K_s = K_{g_n} \]
-\[ T_i = 0.8 \cdot T_\Sigma \qquad ,T_\Sigma \xrightarrow{PT_1} \tau_n\]
-\[ T_d = 0.194 \cdot T_\Sigma \qquad ,T_\Sigma \xrightarrow{PT_1} \tau_n \]
+\[
+	\begin{array}{l@{~}c@{~}l@{\qquad}l}
+        K_p & = & \frac{2}{K_s}         & ,K_s = K_{g_n} \\
+        T_i & = & 0.8 \cdot T_\Sigma    & ,T_\Sigma \xrightarrow{PT_1} \tau_n \\
+        T_d & = & 0.194 \cdot T_\Sigma  & ,T_\Sigma \xrightarrow{PT_1} \tau_n \\
+	\end{array}
+\]
 Die allgemeine Übertragungsfunktion zum PID-Regler lautet
 \[
 	\frac{U(s)}{E(s)}
@@ -17,7 +21,7 @@ Mit den Einstellregeln nach Kuhn ergeben sich für die zwei
 
 \subsection{PID-Reglereinstellung für $G_5(s)$}
 \[
-	\begin{array}{l c l}
+	\begin{array}{l@{~}c@{~}l}
 		K_p & = & 0.4116 \si[per-mode = fraction]{\volt\per\cm} \\
 		T_i & = & 56 \si{\second} \\
 		T_d & = & 13.58 \si{\second} \\
@@ -27,7 +31,7 @@ Mit den Einstellregeln nach Kuhn ergeben sich für die zwei
 
 \subsection{PID-Reglereinstellung für $G_7(s)$}
 \[
-	\begin{array}{l c l}
+	\begin{array}{l@{~}c@{~}l}
 		K_p & = & 0.3448 \si[per-mode = fraction]{\volt\per\cm} \\
 		T_i & = & 78.4 \si{\second} \\
 		T_d & = & 19.012 \si{\second} \\
