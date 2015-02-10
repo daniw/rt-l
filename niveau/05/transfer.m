@@ -35,15 +35,28 @@ h1_initvalue = 0;       % [cm]  Startwert für Füllhöhe h1
 h2_initvalue = 0;       % [cm]  Startwert für Füllhöhe h2
 h3_initvalue = 0;       % [cm]  Startwert für Füllhöhe h2
 
+% Arbeitspunkte
+Q2_bias  = 0;           % [V]   Arbeitspunkt für Pumpleistung
+a2_bias  = 0;           % [1]   Arbeitspunkt für Ventil 2
+a22_bias = 0;           % [1]   Arbeitspunkt für Ventil 22
+h2_bias  = (Q2_bias / (sqrt(2*g)*(a2_bias*AL + a22_bias*AV)))^2;
+                        % [cm]  Arbeitspunkt für Füllhöhe
+
+% Übertragungsfunktion
+Kg      = 1  / (sqrt(2*g)*(a2_bias*AL+a22_bias*AV));    % [cm/V]    Verstärkung für Übertragungsfunktion
+tau     = AT / (sqrt(2*g)*(a2_bias*AL+a22_bias*AV));    % [s]       Zeitkonstante für Übertragungsfunktion
+s       = tf('s');                                      % []        s für Übertragungsfunktion
+g_y_u   = Kg / (tau * s + 1);                           % [1]       Übertragungsfunktion
+
 % Simulationen
 
 % Leere Simulation als Dummy
 sim('wirkungsplan_mdl.slx');
 figure(1);
-plot(h1.time,h1.signals.values, h2.time,h2.signals.values, h3.time,h3.signals.values);
+plot(h2.time,h2.signals.values, h2_transfer.time,h2_transfer.signals.values);
 xlabel('Time [s]'):
 ylabel('Hoehe [s]');
-legend('h1', 'h2', 'h3');
+legend('Wirkungsplan', 'Transferfunktion');
 title('Simulation Wirkungsplan');
 print '-dpdf' 'sim_0.pdf';
 
