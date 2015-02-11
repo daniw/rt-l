@@ -37,7 +37,7 @@ zu bestimmen mit der Tabelle zum Wendetangentenverfahren mit Ordnung 2.
 \[ \Rightarrow T_d = 0.0402\si{\second} \]
 \[ \Rightarrow K_g = 150.5\si[per-mode=fraction]{\per\minute\per\volt} \]
 
-\subsection{Parameterkontrolle}
+\subsubsection{Parameterkontrolle}
 Die aus den Messdaten ausgelesenen Parameter ergaben, dass eine Diskrepanz
 von Modell-Simulation und Messdaten besteht. Die Modellannahmen scheinen
 grundsätzlich korrekt zu sein (PT$_2$ mit Totzeit).
@@ -56,4 +56,31 @@ grundsätzlich korrekt zu sein (PT$_2$ mit Totzeit).
 \end{figure}
 
 \subsection{Parameter empirisch ermitteln gegen Messdaten}
+Die Parameter sind manuell so angepasst, dass diese ein Modell liefern, weches
+den Messdaten möglichst nahe kommt in der Simulation. Hierfür ergeben sich die
+folgenden Werte.
+
+\subsection{Parameter für $G_1(s)$}
+\[ T_1 = 0.1468\si{\second} \]
+\[ T_d = 0.035\si{\second} \]
+\[ K_g = 245.5\si[per-mode=fraction]{\per\minute\per\volt} \]
+
+\subsection{Parameter für $G_2(s)$}
+\[ T_1 = 0.1015\si{\second} \]
+\[ T_d = 0.045\si{\second} \]
+\[ K_g = 150.5\si[per-mode=fraction]{\per\minute\per\volt} \]
+
+\subsubsection{Parameterkontrolle}
+\begin{figure}[h!]
+	\centering
+	\begin{subfigure}{0.475\textwidth}
+		\includegraphics[width=1\textwidth]{07/parameter_test_noload_man.pdf}
+		\caption{Ohne Bremsbelastung ($\alpha = 0$)}
+	\end{subfigure}
+	\begin{subfigure}{0.475\textwidth}
+		\includegraphics[width=1\textwidth]{07/parameter_test_load_man.pdf}
+		\caption{Mit Bremsbelastung ($\alpha = 0.5$)}
+	\end{subfigure}
+	\caption{Verlgeich der Sprungantworten von Modell und Messdaten}
+\end{figure}
 
