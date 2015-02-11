@@ -69,3 +69,35 @@ legend('Simulation', 'Messung');
 title('Parameter Test bei Wirkbelstrombremse auf 0.5');
 print '-dpdf' 'parameter_test_load.pdf';
 
+% manuelle Optimierung 
+t1_noload_man   = 0.1727*0.85;
+t1_load_man     = 0.1269*0.8;
+
+td_noload_man   = 0.035;    % Keine Totzeit
+td_load_man     = 0.045;    % Keine Totzeit
+
+Kp_noload_man   = 245.5;
+Kp_load_man     = 150.5;
+
+G11_man = Kp_noload_man / (t1_noload_man * s + 1)^2 * exp(-td_noload_man*s);
+G12_man = Kp_load_man / (t1_load_man * s + 1)^2 * exp(-td_load_man*s);
+
+[valsim_noload_man,time_noload_man] = step(G11_man*10);
+[valsim_load_man,time_load_man] = step(G12_man*10);
+
+figure(4);
+plot(time_noload_man+3.25,valsim_noload_man+1065, data_noload.Zeit,data_noload.Geschwindigkeit);
+xlabel('Zeit [s]');
+ylabel('Geschwindigkeit [rpm]');
+legend('Simulation', 'Messung');
+title('Parameter Test manuelle Optimierung ohne Last');
+print '-dpdf' 'parameter_test_noload_man.pdf';
+
+figure(5);
+plot(time_load_man+3.76,valsim_load_man+640, data_load.Zeit,data_load.Geschwindigkeit);
+xlabel('Zeit [s]');
+ylabel('Geschwindigkeit [rpm]');
+legend('Simulation', 'Messung');
+title('Parameter Test manuelle Optimierung bei Wirkbelstrombremse auf 0.5');
+print '-dpdf' 'parameter_test_load_man.pdf';
+
