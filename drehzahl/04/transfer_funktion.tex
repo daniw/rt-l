@@ -1,1 +1,62 @@
 \section{Übertragungsfunktionen}
+Gegeben sind die folgenden Gleichungen für $u(t)$ und $\omega(t)$
+\[
+	u(t) = R \cdot i(t) + L \frac{di(t)}{dt} + K_\omega \cdot \omega(t)
+\]
+\[
+	J \frac{d\omega(t)}{dt}
+	= K_\omega \cdot i(t) - M_l - \alpha \cdot \omega(t)
+\]
+Aus der zweiten Gleichung lässt sich die Funktion für $i(t)$ explizit
+aufstellen.
+\[
+	i(t)
+	= \frac{J \cdot \frac{d\omega(t)}{dt} + M_l
+		+ \alpha \cdot \omega(t)}{K_\omega}
+\]
+Dieses $i(t)$ lässt sich nun in die erste Gleichung einsetzen, somit ergibt
+sich
+\[
+	u(t)
+	= R \cdot \frac{J}{K_\omega} \cdot \frac{d\omega(t)}{dt} 
+		+ R \cdot \frac{M_l}{K_\omega}
+		+ R \cdot \frac{\alpha}{K_\omega} \cdot \omega(t)
+		+ L \cdot \frac{J}{K_\omega} \cdot \frac{d^2\omega(t)}{dt^2}
+		+ L \cdot \frac{\alpha}{K_\omega} \cdot \frac{d\omega(t)}{dt}
+		+ K_\omega \omega(t)
+\]
+Diese Funktion für die Spannung $u(t)$ kann nun in den Bildbereich überführt
+werden mit der Laplace-Transformation.
+\[
+	U(s)
+	= R \cdot \frac{J}{K_\omega} \cdot \Omega(s)
+		+ \underbrace{R \cdot \frac{M_l}{K_\omega}}_{0}
+		+ R \cdot \frac{\alpha}{K_\omega} \cdot \Omega(s)
+		+ L \cdot \frac{J}{K_\omega} \cdot \Omega(s) \cdot s^2
+		+ L \cdot \frac{\alpha}{K_\omega} \cdot \Omega(s) \cdot s
+		+ K_\omega \cdot \Omega(s)
+\]
+Der Term
+\[ R \cdot \frac{M_l}{K_\omega} \]
+beschreibt eine Störgrösse und hat nichts mit dem Eingangssignal zu tun. Somit
+darf dieser Term gestrichen werden für die Übertragungsfunktion. Die
+resultierende Funktion kann nun in eine günstige Form ungestellt werden, damit
+der Quotient aufgestellt werden kann von Ausgangs- und Eingangssignal.
+\[
+	U(s)
+	= \Omega(s) \cdot \left(
+		\frac{L \cdot J}{K_\omega} \cdot s^2
+		+ \frac{R \cdot J + L \cdot \alpha}{K_\omega} \cdot s 
+		+ \frac{R \cdot \alpha}{K_\omega}
+		+ K_\omega
+	\right)
+\]
+Die Übertragungsfunktion lautet somit
+\[
+	G_1(s)
+	= \frac{1}{ \frac{L \cdot J}{K_\omega} \cdot s^2
+		+ \frac{R \cdot J + L \cdot \alpha}{K_\omega} \cdot s
+		+ \frac{R \cdot \alpha}{K_\omega}
+		+ K_\omega
+	}
+\]
