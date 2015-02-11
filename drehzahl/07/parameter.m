@@ -43,12 +43,12 @@ t1_load     = tg_load / 2.27;
 td_noload   = tu_noload - tg_noload / 9.65;
 td_load     = tu_load - tg_load / 9.65;
 
-Kp_noload   = 245.5;
-Kp_load     = 150.5;
+Kg_noload   = 245.5;
+Kg_load     = 150.5;
 
 s = tf('s');
-G11 = Kp_noload / (t1_noload * s + 1)^2 * exp(-td_noload*s);
-G12 = Kp_load / (t1_load * s + 1)^2 * exp(-td_load*s);
+G11 = Kg_noload / (t1_noload * s + 1)^2 * exp(-td_noload*s);
+G12 = Kg_load / (t1_load * s + 1)^2 * exp(-td_load*s);
 
 [valsim_noload,time_noload] = step(G11*10);
 [valsim_load,time_load] = step(G12*10);
@@ -76,11 +76,11 @@ t1_load_man     = 0.1269*0.8;
 td_noload_man   = 0.035;    % Keine Totzeit
 td_load_man     = 0.045;    % Keine Totzeit
 
-Kp_noload_man   = 245.5;
-Kp_load_man     = 150.5;
+Kg_noload_man   = 245.5;
+Kg_load_man     = 150.5;
 
-G11_man = Kp_noload_man / (t1_noload_man * s + 1)^2 * exp(-td_noload_man*s);
-G12_man = Kp_load_man / (t1_load_man * s + 1)^2 * exp(-td_load_man*s);
+G11_man = Kg_noload_man / (t1_noload_man * s + 1)^2 * exp(-td_noload_man*s);
+G12_man = Kg_load_man / (t1_load_man * s + 1)^2 * exp(-td_load_man*s);
 
 [valsim_noload_man,time_noload_man] = step(G11_man*10);
 [valsim_load_man,time_load_man] = step(G12_man*10);
