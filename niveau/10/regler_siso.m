@@ -10,5 +10,8 @@ G5 = Kp5/(tau5*s+1);
 G7 = Kp7/(tau7*s+1);
 
 % Regler aus sisotool
-C5 = 14.8423*(s+0.02313) / s;
-C7 = 19.5962*(s+0.01437) / s;
+%sisotool(G5);                  % Aufruf sisotool
+C5 = 14.8423*(s+0.02313) / s;   % Schreiben des Reglers C5 alternativ zu obiger Ausführung
+%sisotool(G7);                  % Aufruf sisotool
+C7 = 19.5962*(s+0.01437) / s;   % Schreiben des Reglers C7 alternativ zu obiger Ausführung
+
