@@ -1,4 +1,6 @@
 \section{Übertragungsfunktionen}
+
+\subsection{$G_1(s)$}
 Gegeben sind die folgenden Gleichungen für $u(t)$ und $\omega(t)$
 \[
 	u(t) = R \cdot i(t) + L \frac{di(t)}{dt} + K_\omega \cdot \omega(t)
@@ -58,5 +60,25 @@ Die Übertragungsfunktion lautet somit
 		+ \frac{R \cdot J + L \cdot \alpha}{K_\omega} \cdot s
 		+ \frac{R \cdot \alpha}{K_\omega}
 		+ K_\omega
+	}
+\]
+
+\subsection{$G_2(s)$}
+In der Aufgabenstellung ist folgender Zusammenhang gegeben
+\[
+	\omega(t) = \frac{d\theta}{dt}(t)
+\]
+Aus diesem Zusammenhang gilt für den Bildbereich
+\[
+	\Omega(s) = \Theta(s) \cdot s
+\]
+Somit kann die Übertragungsfunktion für $G_(s)$ aufgestellt werden als
+\[
+	G_1(s)
+	= \frac{\Theta(s)}{U(s)} = \frac{G_1(s)}{s}
+	= \frac{1}{ \frac{L \cdot J}{K_\omega} \cdot s^3
+		+ \frac{R \cdot J + L \cdot \alpha}{K_\omega} \cdot s^2
+		+ \frac{R \cdot \alpha}{K_\omega} \cdot s
+		+ K_\omega \cdot s
 	}
 \]
