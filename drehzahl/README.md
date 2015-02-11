@@ -3,17 +3,17 @@
 ## Checkliste
 | Aufgabe | verfasst | geprüft |
 |:-------:|:--------:|:-------:|
-| Aufgabe 1  |   |   |
-| Aufgabe 2  |   |   |
-| Aufgabe 3  |   |   |
-| Aufgabe 4  | x |   |
-| Aufgabe 5  |   |   |
-| Aufgabe 6  |   |   |
-| Aufgabe 7  | x |   |
-| Aufgabe 8  | x |   |
-| Aufgabe 9  | x |   |
-| Aufgabe 10 |   |   |
-| Aufgabe 11 |   |   |
-| Aufgabe 12 |   |   |
-| Aufgabe 13 |   |   |
-| Aufgabe 14 |   |   |
+|  1 |   |   |
+|  2 |   |   |
+|  3 |   |   |
+|  4 | x |   |
+|  5 |   |   |
+|  6 |   |   |
+|  7 | x |   |
+|  8 | x |   |
+|  9 | x |   |
+| 10 |   |   |
+| 11 |   |   |
+| 12 |   |   |
+| 13 |   |   |
+| 14 |   |   |
