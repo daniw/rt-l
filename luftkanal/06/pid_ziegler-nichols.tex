@@ -36,30 +36,35 @@ Aus den Messdaten ergeben sich die folgenden Werte für den kritischen P-Regler
 	\end{tabular}
 \end{table}
 
-\subsection{Test des PID-Reglers}
-
+Aus diesen Werten ergeben sich die folgenden PID-Regler 
 \begin{table}[h!]
 	\centering
-	\begin{tabular}{c c c c}
+	\begin{tabular}{c c c c c}
 		Parameter
 			& Berechnung
-			& Wert
+			& $\varphi = 90^\circ$
+			& $\varphi = 45^\circ$
 			& Einheit \\
 		\hline
 		$K_p$
 			& $0.6 \cdot K_{p_{krit}}$
 			& 1.98
+			& 2.04
 			& $\si[per-mode=fraction]{\volt\per\celsius}$ \\
 		$T_n$
 			& $0.5 \cdot T_{krit}$
 			& 0.45
+			& 0.4
 			& $\si{\second}$ \\
 		$T_v$
 			& $0.125 \cdot T_{krit}$
 			& 0.1125
+			& 0.1
 			& $\si{\second}$
 	\end{tabular}
 \end{table}
+
+\subsection{Test des PID-Reglers}
 
 \begin{figure}[h!]
 	\centering
@@ -74,3 +79,21 @@ Aus den Messdaten ergeben sich die folgenden Werte für den kritischen P-Regler
 	\caption{Sprungantworten der PID-Regler nach Ziegler-Nichols}
 \end{figure}
 
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{l c c c}
+		Eigenschaft
+			& $\varphi = 90^\circ$
+			& $\varphi = 45^\circ$ 
+			& Einheit\\
+		\hline
+		Ausregelzeit ($e < 1\%$)
+			& 2.7
+			& 3.6
+			& $\si{\second}$ \\
+		Überschwingen
+			& 49
+			& 60
+			& $\%$
+	\end{tabular}
+\end{table}
