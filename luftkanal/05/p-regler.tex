@@ -1,2 +1,19 @@
-\section{Führungsübertragungsfunktion des geregelten Prozesses}
-
+\section{P-Regler}
+\[ G_F(s) = \frac{L(s)}{1 + L(s)} = \frac{C(s) \cdot G_1(s)}{1 + C(s) \cdot G_1(s)} \]
+\[ G_1(s) = \frac{K_g}{\tau \cdot s + 1} \cdot e^{-T_d \cdot s} \]
+\[ C(s) = K_p \]
+\[ L(s) = \frac{K_p \cdot K_g}{\tau \cdot s + 1} \cdot e^{-T_d \cdot s} \]
+\[ G_F(s) = \frac{\frac{K_p \cdot K_g}{\tau \cdot s + 1} \cdot e^{-T_d \cdot s}}
+    {1 + \frac{K_p \cdot K_g}{\tau \cdot s + 1} \cdot e^{-T_d \cdot s}}
+\]
+\[ e(t \to \infty) = \lim\limits_{s \to 0} (1 - G_F(s))
+    = 1 - \lim\limits_{s \to 0} \left(\frac{\frac{K_p \cdot K_g}{\tau \cdot s + 1} \cdot e^{-T_d \cdot s}}
+        {1 + \frac{K_p \cdot K_g}{\tau \cdot s + 1} \cdot e^{-T_d \cdot s}}\right)
+    = 1 - \frac{K_p \cdot K_g}{1 + K_p \cdot K_g}
+\]
+\[
+    = 1 - \left(1 - \frac{1}{1 + K_p \cdot K_g}\right)
+    = \frac{1}{1 + K_p \cdot K_g} > 0
+\]
+Anforderung "'keine stationäre Ungenauigkeit"' mit P Regler nicht erreichbar \\
+$\rightarrow$ PI Regler
