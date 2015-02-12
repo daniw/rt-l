@@ -1,0 +1,17 @@
+% load the measurement data
+data_a = load('niveau_pid_messung_G');
+data_b = load('niveau_pid_messung_G7');
+
+% plot the measurements for G5
+figure(1);
+subplot(2,1,1);
+plot(data_a.Zeit, data_a.NiveauTank2);
+xlabel('Zeit [t]');
+ylabel('Füllstand [cm]');
+title('Sprungantwort');
+subplot(2,1,1);
+plot(data_a.Zeit, data_a.Pumpe);
+xlabel('Zeit [t]');
+ylabel('Füllstand [cm]');
+
+% plot the measurements for G5
