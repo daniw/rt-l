@@ -41,7 +41,7 @@ h3_initvalue = 0;       % [cm]  Startwert für Füllhöhe h2
 sim('wirkungsplan_mdl.slx');
 figure(1);
 plot(h1.time,h1.signals.values, h2.time,h2.signals.values, h3.time,h3.signals.values);
-xlabel('Time [s]'):
+xlabel('Time [s]');
 ylabel('Hoehe [s]');
 legend('h1', 'h2', 'h3');
 title('Simulation Wirkungsplan');

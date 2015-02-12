@@ -54,7 +54,7 @@ g_y_u   = Kg / (tau * s + 1);                           % [1]       Übertragung
 sim('wirkungsplan_mdl.slx');
 figure(1);
 plot(h2.time,h2.signals.values, h2_transfer.time,h2_transfer.signals.values);
-xlabel('Time [s]'):
+xlabel('Time [s]');
 ylabel('Hoehe [s]');
 legend('Wirkungsplan', 'Transferfunktion');
 title('Simulation Wirkungsplan');
