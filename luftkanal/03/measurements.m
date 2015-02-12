@@ -13,27 +13,30 @@ subplot(2,1,2);
 plot( ...
     data_full.Zeit, ...
     data_full.Heizung);
+ylim([0 6]);
 
 print -dpdf 'step_full'
 
 % plot the step for 'full' valve
 full_start = 500;
 full_stop = 1000;
-figure(1);
+figure(2);
 subplot(2,1,1);
 plot( ...
-    data_full.Zeit(full_start:full_stop), ...
-    data_full.Temperatur(full_start:full_stop));
+    data_full.Zeit, ...
+    data_full.Temperatur);
+axis([5 10 25 40]);
 title('Sprungantwort 1[V] -> 5[V] @ P = 90°')
 subplot(2,1,2);
 plot( ...
     data_full.Zeit(full_start:full_stop), ...
     data_full.Heizung(full_start:full_stop));
+axis([5 10 0 6]);
 
 print -dpdf 'step_full_scale'
 
 % plot the data for 'half' valve
-figure(2);
+figure(3);
 subplot(2,1,1);
 plot( ...
     data_half.Zeit, ...
@@ -44,22 +47,25 @@ subplot(2,1,2);
 plot( ...
     data_half.Zeit, ...
     data_half.Heizung);
+ylim([0 6]);
 
 print -dpdf 'step_half'
 
 % plot the data for 'half' valve
 half_start = 400;
 half_stop = 900;
-figure(2);
+figure(4);
 subplot(2,1,1);
 plot( ...
-    data_half.Zeit(half_start:half_stop), ...
-    data_half.Temperatur(half_start:half_stop));
+    data_half.Zeit, ...
+    data_half.Temperatur);
+axis([4 9 25 40]);
 title('Sprungantwort 1[V] -> 5[V] @ P = 45°')
 
 subplot(2,1,2);
 plot( ...
-    data_half.Zeit(half_start:half_stop), ...
-    data_half.Heizung(half_start:half_stop));
+    data_half.Zeit, ...
+    data_half.Heizung);
+axis([4 9 0 6]);
 
 print -dpdf 'step_half_scale'
