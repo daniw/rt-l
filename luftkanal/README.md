@@ -6,14 +6,11 @@
 |  1      |          |         |      |
 |  2      |          |         |      |
 |  3      |          |         |      |
-|  4      |          |         |      |
+|  4      | x        |         | Plot-Achsen beschriften |
 |  5      |          |         |      |
-|  6      |          |         |      |
-|  7      |          |         |      |
-|  8      |          |         |      |
-|  9      |          |         |      |
-| 10      |          |         |      |
-| 11      |          |         |      |
-| 12      |          |         |      |
-| 13      |          |         |      |
-| 14      |          |         |      |
+|  6      |          |         | Antwortzeiten und Überschwingung notieren |
+|  7      |          |         | dokumentieren |
+|  8      |          |         | dokumentieren |
+|  9      |          |         | dokumentieren |
+| 10      |          |         | dokumentieren |
+| 11      |          |         | dokumentieren |
