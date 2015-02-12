@@ -1,1 +1,21 @@
 \section{Blockschaltbild}
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}[node distance=3.0cm]
+        \node (soll)    []                                  {$r(t)~[\si{rpm}]$};
+        \node (diff)    [sumpoint, right of=soll]           {};
+        \node (control) [controlblock, right of=diff]       {$C(s)$};
+        \node (path1)   [controlblock, right of=control]    {$G(s)$};
+        \node (feedback)[crosspoint, right of=path1]        {};
+        \node (ist)     [right of=feedback]                 {$y(t)~[\si{rpm}]$};
+        \node (noise)   [above of=path1]                    {$v(t)$};
+        \draw[thick, ->] (soll)     -- (diff) node[above left] {$+$};;
+        \draw[thick, ->] (diff)     -- node[above] {$e(t)~[\si{rpm}]$} (control);
+        \draw[thick, ->] (control)  -- node[above] {$u(t)~[\si{\volt}]$} (path1);
+        \draw[thick, ->] (path1)    -- (ist);
+        \draw[thick, ->] (noise)    -- (path1);
+        \draw[thick, ->] (feedback) |- ++(0, -1.5cm) -| (diff) node[below right] {$-$};
+    \end{tikzpicture}
+    \caption{Blockschaltbild geregeltes System}
+\end{figure}
+
