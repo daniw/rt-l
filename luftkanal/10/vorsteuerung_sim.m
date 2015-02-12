@@ -24,14 +24,21 @@ C = 1.2429 * (s + 0.03578) / s;
 
 sim('vorsteuerung_mdl.slx');
 
+figure(1)
+subplot(2,1,1);
 plot(theta_soll.time,theta_soll.signals.values, ...
     theta_full.time,theta_full.signals.values, ...
-    theta_half.time,theta_half.signals.values, ...
-    u_full.time,u_full.signals.values, ...
-    u_half.time,u_half.signals.values);
+    theta_half.time,theta_half.signals.values);
 title('Sprungantwort Regler');
 xlabel('Zeit [s]');
 ylabel('Temperatur [°]');
-legend('Solltemperatur', 'Sprungantwort 90°', 'Sprungantwort 45°', 'Stellgrösse 90°', 'Stellgrösse 45°');
+legend('Solltemperatur', 'Sprungantwort 90°', 'Sprungantwort 45°');
+subplot(2,1,2);
+plot(u_full.time,u_full.signals.values, ...
+    u_half.time,u_half.signals.values);
+title('Stellgrösse');
+xlabel('Zeit [s]');
+ylabel('Heizspannung [V]');
+legend('Heizleistung 90°', 'Heizleistung 45°');
 
 print '-dpdf' 'vorsteuerung_plot.pdf'
