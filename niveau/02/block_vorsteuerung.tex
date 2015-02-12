@@ -1,2 +1,27 @@
 \section{Blockschaltbild mit Vorsteuerung}
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}[node distance=2.3cm]
+        \node (soll)    []                                  {$r(t)~[\si{\centi\meter}]$};
+        \node (in)      [crosspoint, right of=soll]         {};
+        \node (diff)    [sumpoint, right of=in]             {};
+        \node (control) [controlblock, right of=diff]       {$C(s)$};
+        \node (sum1)    [sumpoint, right of=control]        {};
+        \node (path1)   [controlblock, right of=sum1]       {$G(s)$};
+        \node (feedback)[crosspoint, right of=path1]        {};
+        \node (ist)     [right of=feedback]                 {$y(t)~[\si{\centi\meter}]$};
+        \node (noise)   [above of=path1]                    {$v(t)$};
+        \node (forward) [controlblock, above of=control]    {$F(s)$};
+        \draw[thick, ->] (soll)     -- (diff) node[above left] {$+$};;
+        \draw[thick, ->] (diff)     -- node[above] {$e(t)~[\si{\centi\meter}]$} (control);
+        \draw[thick, ->] (control)  -- (sum1) node[below left] {$+$};
+        \draw[thick, ->] (sum1)     -- node[above] {$u(t)~[\si{\volt}]$} (path1);
+        \draw[thick, ->] (path1)    -- (ist);
+        \draw[thick, ->] (noise)    -- (path1);
+        \draw[thick, ->] (feedback) |- ++(0, -1.5cm) -| (diff) node[below right] {$-$};
+        \draw[thick, ->] (in)       |- (forward);
+        \draw[thick, ->] (forward)  -| (sum1) node[above left] {$+$};
+    \end{tikzpicture}
+    \caption{Blockschaltbild Regelung mit Vorsteuerung}
+\end{figure}
 
