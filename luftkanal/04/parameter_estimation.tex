@@ -122,7 +122,42 @@ dies die relevante Zeitkonstante. Ebenso ist auch das $K_g$ nahezu identisch.
 Der Prozess verhält sich somit ähnlich für beide Arbeitspunkte
 ($\varphi = 90^\circ$, $\varphi = 45^\circ$).
 
-\subsection{Fazit}
+\subsubsection{Fazit}
 Je grösser die Luftzufuhr ist ($\varphi$ gross), desto schlechter kann die
 durchströmende Luft aufgeheizt werden. Die Totzeit ist für alle beobachteten
 Arbeitspunkte die selbe ($T_d =$ const.).
+
+
+\subsection{Vergleich von Messdaten und Simulationsergebnissen}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.8]{04/model.pdf}
+    \caption{Testmodell}
+\end{figure}
+
+\begin{figure}[h!]
+    \begin{subfigure}{0.475\textwidth}
+        \includegraphics[width=1\textwidth]{04/step_mod_sim_90.pdf}
+        \caption{Schrittantwort bei $\varphi = 90^\circ$}
+    \end{subfigure}
+    \hfill{}
+    \begin{subfigure}{0.475\textwidth}
+        \includegraphics[width=1\textwidth]{04/step_mod_sim_90_scale.pdf}
+        \caption{Schrittantwort skaliert auf Sprung bei $\varphi = 90^\circ$}
+    \end{subfigure}
+    \caption{Parameterkontrolle für $\varphi = 90^\circ$}
+\end{figure}
+
+\begin{figure}[h!]
+    \begin{subfigure}{0.475\textwidth}
+        \includegraphics[width=1\textwidth]{04/step_mod_sim_45.pdf}
+        \caption{Schrittantwort bei $\varphi = 45^\circ$}
+    \end{subfigure}
+    \hfill{}
+    \begin{subfigure}{0.475\textwidth}
+        \includegraphics[width=1\textwidth]{04/step_mod_sim_45_scale.pdf}
+        \caption{Schrittantwort skaliert auf Sprung bei $\varphi = 45^\circ$}
+    \end{subfigure}
+    \caption{Parameterkontrolle für $\varphi = 45^\circ$}
+\end{figure}

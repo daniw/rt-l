@@ -1,6 +1,6 @@
 % Load data from measurements
-data_full = load('../03/air_step_1_5_90.mat');  % valve 90°
-data_half = load('../03/air_step_1_5_45.mat');  % valve 45°
+data_full = load('../03/air_step_1_5_90.mat');  % valve 90ï¿½
+data_half = load('../03/air_step_1_5_45.mat');  % valve 45ï¿½
 
 % plot data
 samplemin  = 500;
@@ -22,8 +22,8 @@ line([samplemin/sample samplemax/sample],[thetamax thetamax], 'color', 'r');
 line([samplemin/sample samplemax/sample],[theta63 theta63], 'color', 'g');
 line([samplemin/sample samplemax/sample],[theta86 theta86], 'color', 'g');
 xlabel('Zeit [s]');
-ylabel('Temperatur [°C]');
-title('Sprungantwort 1[V] -> 5[V] @ P = 90°');
+ylabel('Temperatur [Â°C]');
+title('Sprungantwort 1[V] -> 5[V] @ P = 90Â°');
 legend('Temperatur', 'Tmin', 'Tmax', '63%', '86%');
 
 subplot(2,1,2);
@@ -53,8 +53,8 @@ line([samplemin/sample samplemax/sample],[thetamax thetamax], 'color', 'r');
 line([samplemin/sample samplemax/sample],[theta63 theta63], 'color', 'g');
 line([samplemin/sample samplemax/sample],[theta86 theta86], 'color', 'g');
 xlabel('Zeit [s]');
-ylabel('Temperatur [°C]');
-title('Sprungantwort 1[V] -> 5[V] @ P = 45°');
+ylabel('Temperatur [Â°C]');
+title('Sprungantwort 1[V] -> 5[V] @ P = 45Â°');
 legend('Temperatur', 'Tmin', 'Tmax', '63%', '86%');
 
 subplot(2,1,2);
