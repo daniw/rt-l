@@ -55,6 +55,7 @@ G12 = Kg_load / (t1_load * s + 1)^2 * exp(-td_load*s);
 
 figure(3);
 plot(time_noload+3.25,valsim_noload+1065, data_noload.Zeit,data_noload.Geschwindigkeit);
+xlim([3 5]);
 xlabel('Zeit [s]');
 ylabel('Geschwindigkeit [rpm]');
 legend('Simulation', 'Messung');
@@ -63,6 +64,7 @@ print '-dpdf' 'parameter_test_noload.pdf';
 
 figure(4);
 plot(time_load+3.76,valsim_load+640, data_load.Zeit,data_load.Geschwindigkeit);
+xlim([3.5 5]);
 xlabel('Zeit [s]');
 ylabel('Geschwindigkeit [rpm]');
 legend('Simulation', 'Messung');
@@ -85,16 +87,18 @@ G12_man = Kg_load_man / (t1_load_man * s + 1)^2 * exp(-td_load_man*s);
 [valsim_noload_man,time_noload_man] = step(G11_man*10);
 [valsim_load_man,time_load_man] = step(G12_man*10);
 
-figure(4);
+figure(5);
 plot(time_noload_man+3.25,valsim_noload_man+1065, data_noload.Zeit,data_noload.Geschwindigkeit);
+xlim([3 5]);
 xlabel('Zeit [s]');
 ylabel('Geschwindigkeit [rpm]');
 legend('Simulation', 'Messung');
 title('Parameter Test manuelle Optimierung ohne Last');
 print '-dpdf' 'parameter_test_noload_man.pdf';
 
-figure(5);
+figure(6);
 plot(time_load_man+3.76,valsim_load_man+640, data_load.Zeit,data_load.Geschwindigkeit);
+xlim([3.5 5]);
 xlabel('Zeit [s]');
 ylabel('Geschwindigkeit [rpm]');
 legend('Simulation', 'Messung');
