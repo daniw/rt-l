@@ -36,27 +36,40 @@ h2_initvalue = 0;       % [cm]  Startwert für Füllhöhe h2
 h3_initvalue = 0;       % [cm]  Startwert für Füllhöhe h2
 
 % Arbeitspunkte
-Q2_bias  = 0;           % [V]   Arbeitspunkt für Pumpleistung
-a2_bias  = 0;           % [1]   Arbeitspunkt für Ventil 2
+Q2_bias  = 5;           % [V]   Arbeitspunkt für Pumpleistung
+a2_bias  = 0.5;         % [1]   Arbeitspunkt für Ventil 2
 a22_bias = 0;           % [1]   Arbeitspunkt für Ventil 22
-h2_bias  = (Q2_bias / (sqrt(2*g)*(a2_bias*AL + a22_bias*AV)))^2;
+h2_bias  = (Q2_bias / ((sqrt(2*g)*(a2_bias*AL + a22_bias*AV))))^2;
                         % [cm]  Arbeitspunkt für Füllhöhe
 
 % Übertragungsfunktion
 Kg      = 1  / (sqrt(2*g)*(a2_bias*AL+a22_bias*AV));    % [cm/V]    Verstärkung für Übertragungsfunktion
 tau     = AT / (sqrt(2*g)*(a2_bias*AL+a22_bias*AV));    % [s]       Zeitkonstante für Übertragungsfunktion
 s       = tf('s');                                      % []        s für Übertragungsfunktion
-g_y_u   = Kg / (tau * s + 1);                           % [1]       Übertragungsfunktion
+G_y_u   = Kg / (tau * s + 1);                           % [1]       Übertragungsfunktion
 
-% Simulationen
+%%%%%%%%%%%%%%%%
+% Simulationen %
+%%%%%%%%%%%%%%%%
 
 % Leere Simulation als Dummy
-sim('wirkungsplan_mdl.slx');
+a2_stepinit = 0.5;      % Abflussventil zu begin halb offen
+a2_stepvalue = 1;       % Abflussventil offen
+a2_steptime = 500;      % zum Zeitpunkt t = 500
+Q2_stepvalue = 5;       % Pumpenspannung 5 [ V ]
+Q2_steptime = 100;      % zum Zeitpunkt t = 100
+sim('transfer_mdl.slx');
 figure(1);
+subplot(2,1,1);
 plot(h2.time,h2.signals.values, h2_transfer.time,h2_transfer.signals.values);
 xlabel('Time [s]');
 ylabel('Hoehe [s]');
 legend('Wirkungsplan', 'Transferfunktion');
 title('Simulation Wirkungsplan');
+subplot(2,1,2);
+plot(Q2.time,Q2.signals.values);
+xlabel('Time [s]');
+ylabel('Pumpspannung [V]');
+title('Stellgroesse');
 print '-dpdf' 'sim_0.pdf';
 
