@@ -3,17 +3,17 @@
 ## Checkliste
 | Aufgabe | verfasst | geprüft | todo |
 |:-------:|:--------:|:-------:|:----:|
-|  1      |          |         | zeichnen |
-|  2      |          |         | zeichnen |
-|  3      |          |         | Simulation |
-|  4      |          |         |  |
-|  5      | x        |         | Simulation |
-|  6      |          |         | Sprungantwort darstellen |
-|  7      | x        |         |  |
-|  8      | x        |         |  |
-|  9      | x        |         | Test Regler |
-| 10      | x        |         | Grafiken neu zeichnen |
-| 11      |          |         |  |
-| 12      |          |         |  |
-| 13      |          |         |  |
-| 14      |          |         |  |
+|  1      | x        |         |      |
+|  2      | x        |         |      |
+|  3      | x        |         | Plausibilität |
+|  4      | x        |         |      |
+|  5      | x        |         |      |
+|  6      | x        |         |      |
+|  7      | x        |         |      |
+|  8      | x        |         |      |
+|  9      | x        |         | Plot Daten |
+| 10      | x        |         |      |
+| 11      | x        |         |      |
+| 12      | x        |         |      |
+| 13      | x        |         |      |
+| 14      | x        |         |      |
