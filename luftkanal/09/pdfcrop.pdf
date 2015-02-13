@@ -1,0 +1,2 @@
+pdfcrop pi_siso_full_plot.pdf pi_siso_full_plot.pdf
+pdfcrop pi_siso_half_plot.pdf pi_siso_half_plot.pdf
