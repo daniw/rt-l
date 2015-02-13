@@ -35,15 +35,30 @@ h1_initvalue = 0;       % [cm]  Startwert für Füllhöhe h1
 h2_initvalue = 0;       % [cm]  Startwert für Füllhöhe h2
 h3_initvalue = 0;       % [cm]  Startwert für Füllhöhe h2
 
-% Simulationen
+%%%%%%%%%%%%%%%%
+% Simulationen %
+%%%%%%%%%%%%%%%%
 
-% Leere Simulation als Dummy
+% Simulation
+a2_stepinit  = 0.5;     % Abflussventil zu begin halb offen
+a2_stepvalue = 1;       % Abflussventil offen
+a2_steptime  = 500;     % zum Zeitpunkt t = 500
+Q2_stepvalue = 5;       % Pumpenspannung 5 [V]
+Q2_steptime  = 100;     % zum Zeitpunkt t = 100
 sim('wirkungsplan_mdl.slx');
 figure(1);
-plot(h1.time,h1.signals.values, h2.time,h2.signals.values, h3.time,h3.signals.values);
+subplot(2,1,1);
+plot(h1.time,h1.signals.values, ...
+    h2.time,h2.signals.values, ...
+    h3.time,h3.signals.values);
 xlabel('Time [s]');
-ylabel('Hoehe [s]');
+ylabel('Hoehe [m]');
 legend('h1', 'h2', 'h3');
 title('Simulation Wirkungsplan');
+subplot(2,1,2);
+plot(Q2.time,Q2.signals.values);
+xlabel('Time [s]');
+ylabel('Pumpspannung [V]');
+title('Stellgrösse');
 print '-dpdf' 'sim_0.pdf';
 
