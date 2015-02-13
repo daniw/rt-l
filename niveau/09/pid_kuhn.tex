@@ -38,3 +38,52 @@ Mit den Einstellregeln nach Kuhn ergeben sich für die zwei
 		N & = & 10
 	\end{array}
 \]
+
+\newpage
+\subsection{Testergebnisse}
+
+\begin{figure}[h!]
+	\centering
+	\begin{subfigure}{0.475\textwidth}
+		\includegraphics[width=1\textwidth]{09/step_g5_plot.pdf}
+		\caption{Sprungantwort bei $G_5(s)$}
+	\end{subfigure}
+	\hfill{}
+	\begin{subfigure}{0.475\textwidth}
+		\includegraphics[width=1\textwidth]{09/step_g7_plot.pdf}
+		\caption{Sprungantwort bei $G_7(s)$}
+	\end{subfigure}
+	\caption{Sprungantworten für den PID-Regler nach Kuhn}
+\end{figure}
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{l c c c c}
+		Eigenschaft
+			& Spezifikation
+			& bei $G_5(s)$
+			& bei $G_7(s)$
+			& Einheit \\
+		\hline
+		Genauigkeit (mean)
+			& 100
+			& 3.3
+			& 8.28
+			& \% \\
+		Anregelzeit (0-99\%)
+			& $4$
+			& 106
+			& 169
+			& $\si{\second}$ \\
+		Überschwingen
+			& $10$
+			& n.a.
+			& n.a.
+			& \% \\
+		Einschwingzeit
+			& $5$
+			& n.a. 
+			& n.a.
+			& $\si{\second}$ \\
+	\end{tabular}
+\end{table}
