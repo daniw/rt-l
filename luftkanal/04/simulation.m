@@ -46,6 +46,7 @@ plot(data_g45.Zeit, data_g45.Heizung);
 legend('Heizspannung [V]');
 xlabel('Zeit [s]');
 ylabel('Heizspannung [V]');
+title('Stellgroesse');
 ylim([0 6]);
 
 print -dpdf 'step_mod_sim_45'
@@ -64,6 +65,7 @@ plot(data_g90.Zeit, data_g90.Heizung);
 legend('Heizspannung [V]');
 xlabel('Zeit [s]');
 ylabel('Heizspannung [V]');
+title('Stellgroesse');
 ylim([0 6]);
 
 print -dpdf 'step_mod_sim_90'
@@ -84,6 +86,7 @@ plot(data_g45.Zeit, data_g45.Heizung);
 legend('Heizspannung [V]');
 xlabel('Zeit [s]');
 ylabel('Heizspannung [V]');
+title('Stellgroesse');
 axis([4 20 0 6]);
 
 print -dpdf 'step_mod_sim_45_scale'
@@ -103,6 +106,7 @@ plot(data_g90.Zeit, data_g90.Heizung);
 legend('Heizspannung [V]');
 xlabel('Zeit [s]');
 ylabel('Heizspannung [V]');
+title('Stellgroesse');
 axis([4 20 0 6]);
 
 print -dpdf 'step_mod_sim_90_scale'

@@ -36,7 +36,7 @@ legend('Solltemperatur', 'Sprungantwort 90°', 'Sprungantwort 45°');
 subplot(2,1,2);
 plot(u_full.time,u_full.signals.values, ...
     u_half.time,u_half.signals.values);
-title('Stellgrösse');
+title('Stellgroesse');
 xlabel('Zeit [s]');
 ylabel('Heizspannung [V]');
 legend('Heizleistung 90°', 'Heizleistung 45°');

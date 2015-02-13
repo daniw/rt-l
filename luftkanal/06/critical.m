@@ -11,14 +11,15 @@ plot( ...
     data_full.Zeit(17800:18000), ...
     data_full.Temperatur(17800:18000));
 xlabel('Zeit [s]');
-ylabel('Temperatur [°C]');
-title('Kritische P-Reglereinstellung für Ventilstellung 90°')
+ylabel('Temperatur [Â°C]');
+title('Kritische P-Reglereinstellung fÃ¼r Ventilstellung 90Â°')
 subplot(2,1,2)
 plot( ...
     data_full.Zeit(17800:18000), ...
     data_full.Heizung(17800:18000));
 xlabel('Zeit [s]');
 ylabel('Heizung [V]');
+title('Stellgroesse');
 
 print -dpdf p_krit_full;
 
@@ -29,14 +30,15 @@ plot( ...
     data_half.Zeit(17800:18000), ...
     data_half.Temperatur(17800:18000));
 xlabel('Zeit [s]');
-ylabel('Temperatur [°C]');
-title('Kritische P-Reglereinstellung für Ventilstellung 45°')
+ylabel('Temperatur [Â°C]');
+title('Kritische P-Reglereinstellung fÃ¼r Ventilstellung 45Â°')
 subplot(2,1,2)
 plot( ...
     data_half.Zeit(17800:18000), ...
     data_half.Heizung(17800:18000));
 xlabel('Zeit [s]');
 ylabel('Heizung [V]');
+title('Stellgroesse');
 
 print -dpdf p_krit_half;
 
@@ -47,14 +49,15 @@ plot( ...
     data_pid_zn_full.Zeit(500:1000), ...
     data_pid_zn_full.Temperatur(500:1000));
 xlabel('Zeit [s]');
-ylabel('Temperatur [°C]');
-title('Sprungantwort für PID nach Ziegler-Nichols für Ventilstellung 90°')
+ylabel('Temperatur [Â°C]');
+title('Sprungantwort fÃ¼r PID nach Ziegler-Nichols fÃ¼r Ventilstellung 90Â°')
 subplot(2,1,2)
 plot( ...
     data_pid_zn_full.Zeit(500:1000), ...
     data_pid_zn_full.Heizung(500:1000));
 xlabel('Zeit [s]');
 ylabel('Heizung [V]');
+title('Stellgroesse');
 
 print -dpdf pid_zn_full;
 
@@ -65,13 +68,14 @@ plot( ...
     data_pid_zn_half.Zeit(400:1000), ...
     data_pid_zn_half.Temperatur(400:1000));
 xlabel('Zeit [s]');
-ylabel('Temperatur [°C]');
-title('Sprungantwort für PID nach Ziegler-Nichols für Ventilstellung 45°')
+ylabel('Temperatur [Â°C]');
+title('Sprungantwort fÃ¼r PID nach Ziegler-Nichols fÃ¼r Ventilstellung 45Â°')
 subplot(2,1,2)
 plot( ...
     data_pid_zn_half.Zeit(400:1000), ...
     data_pid_zn_half.Heizung(400:1000));
 xlabel('Zeit [s]');
 ylabel('Heizung [V]');
+title('Stellgroesse');
 
 print -dpdf pid_zn_half;

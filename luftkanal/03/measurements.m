@@ -1,6 +1,6 @@
 % Load data from measurements
-data_full = load('air_step_1_5_90.mat');  % valve 90°
-data_half = load('air_step_1_5_45.mat');  % valve 45°
+data_full = load('air_step_1_5_90.mat');  % valve 90Â°
+data_half = load('air_step_1_5_45.mat');  % valve 45Â°
 
 % plot the step for 'full' valve
 figure(1);
@@ -8,9 +8,9 @@ subplot(2,1,1);
 plot( ...
     data_full.Zeit, ...
     data_full.Temperatur);
-title('Sprungantwort 1[V] -> 5[V] @ P = 90°')
+title('Sprungantwort 1[V] -> 5[V] @ P = 90Â°')
 xlabel('Zeit [t]');
-ylabel('Temperatur [°C]');
+ylabel('Temperatur [Â°C]');
 subplot(2,1,2);
 plot( ...
     data_full.Zeit, ...
@@ -18,6 +18,7 @@ plot( ...
 ylim([0 6]);
 xlabel('Zeit [t]');
 ylabel('Heizung [V]');
+title('Stellgroesse');
 
 print -dpdf 'step_full'
 
@@ -30,9 +31,9 @@ plot( ...
     data_full.Zeit, ...
     data_full.Temperatur);
 axis([5 10 25 40]);
-title('Sprungantwort 1[V] -> 5[V] @ P = 90°');
+title('Sprungantwort 1[V] -> 5[V] @ P = 90Â°');
 xlabel('Zeit [t]');
-ylabel('Temperatur [°C]');
+ylabel('Temperatur [Â°C]');
 subplot(2,1,2);
 plot( ...
     data_full.Zeit(full_start:full_stop), ...
@@ -40,6 +41,7 @@ plot( ...
 axis([5 10 0 6]);
 xlabel('Zeit [t]');
 ylabel('Heizung [V]');
+title('Stellgroesse');
 
 print -dpdf 'step_full_scale'
 
@@ -49,9 +51,9 @@ subplot(2,1,1);
 plot( ...
     data_half.Zeit, ...
     data_half.Temperatur);
-title('Sprungantwort 1[V] -> 5[V] @ P = 45°')
+title('Sprungantwort 1[V] -> 5[V] @ P = 45Â°')
 xlabel('Zeit [t]');
-ylabel('Temperatur [°C]');
+ylabel('Temperatur [Â°C]');
 subplot(2,1,2);
 plot( ...
     data_half.Zeit, ...
@@ -59,6 +61,7 @@ plot( ...
 ylim([0 6]);
 xlabel('Zeit [t]');
 ylabel('Heizung [V]');
+title('Stellgroesse');
 
 print -dpdf 'step_half'
 
@@ -71,9 +74,9 @@ plot( ...
     data_half.Zeit, ...
     data_half.Temperatur);
 axis([4 9 25 40]);
-title('Sprungantwort 1[V] -> 5[V] @ P = 45°')
+title('Sprungantwort 1[V] -> 5[V] @ P = 45Â°')
 xlabel('Zeit [t]');
-ylabel('Temperatur [°C]');
+ylabel('Temperatur [Â°C]');
 subplot(2,1,2);
 plot( ...
     data_half.Zeit, ...
@@ -81,6 +84,7 @@ plot( ...
 axis([4 9 0 6]);
 xlabel('Zeit [t]');
 ylabel('Heizung [V]');
+title('Stellgroesse');
 
 
 print -dpdf 'step_half_scale'

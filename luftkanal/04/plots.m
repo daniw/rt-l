@@ -1,6 +1,6 @@
 % Load data from measurements
-data_full = load('../03/air_step_1_5_90.mat');  % valve 90�
-data_half = load('../03/air_step_1_5_45.mat');  % valve 45�
+data_full = load('../03/air_step_1_5_90.mat');  % valve 90°
+data_half = load('../03/air_step_1_5_45.mat');  % valve 45°
 
 % plot data
 samplemin  = 500;
@@ -30,6 +30,8 @@ subplot(2,1,2);
 plot( ...
     data_full.Zeit,...
     data_full.Heizung);
+title('Stellgroesse');
+ylabel('Heizung [V]');
 axis([5 10 0 6]);
 
 print '-dpdf' 'step_plot_full_.pdf'
@@ -61,6 +63,8 @@ subplot(2,1,2);
 plot( ...
     data_half.Zeit(samplemin:samplemax),...
     data_half.Heizung(samplemin:samplemax));
+title('Stellgroesse');
+ylabel('Heizung [V]');
 axis([4 9 0 6]);
 
 print '-dpdf' 'step_plot_half_.pdf'
