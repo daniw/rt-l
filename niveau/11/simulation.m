@@ -8,12 +8,12 @@ sim('model');
 figure(1);
 subplot(2,1,1);
 plot( ...
-    h5.time, h5.signals.values, ... % Füllstand
+    h5.time, h5.signals.values, ... % Fuellstand
     r5.time, r5.signals.values);    % Sollstand
-legend('Füllstand [cm]', 'Sollstand [cm]');
+legend('Fuellstand [cm]', 'Sollstand [cm]');
 xlabel('Zeit [t]');
-ylabel('Füllstand [cm]');
-title('Sprungantwort - Übersicht');
+ylabel('Fuellstand [cm]');
+title('Sprungantwort - Uebersicht');
 axis([495 515 2.75 3.75]);
 
 subplot(2,1,2);
@@ -30,12 +30,12 @@ axis([495 515 0 10]);
 figure(2);
 subplot(2,1,1);
 plot( ...
-    h5.time, h5.signals.values, ... % Füllstand
+    h5.time, h5.signals.values, ... % Fuellstand
     r5.time, r5.signals.values);    % Sollstand
-legend('Füllstand [cm]', 'Sollstand [cm]');
+legend('Fuellstand [cm]', 'Sollstand [cm]');
 xlabel('Zeit [t]');
-ylabel('Füllstand [cm]');
-title('Sprungantwort - Überschwingen');
+ylabel('Fuellstand [cm]');
+title('Sprungantwort - Ueberschwingen');
 axis([490 690 3.495 3.505]);
 
 subplot(2,1,2);
@@ -52,12 +52,12 @@ axis([490 690 0 10]);
 figure(3);
 subplot(2,1,1);
 plot( ...
-    h7.time, h7.signals.values, ... % Füllstand
+    h7.time, h7.signals.values, ... % Fuellstand
     r7.time, r7.signals.values);    % Sollstand
-legend('Füllstand [cm]', 'Sollstand [cm]');
+legend('Fuellstand [cm]', 'Sollstand [cm]');
 xlabel('Zeit [t]');
-ylabel('Füllstand [cm]');
-title('Sprungantwort - Übersicht');
+ylabel('Fuellstand [cm]');
+title('Sprungantwort - Uebersicht');
 axis([495 515 11.75 12.75]);
 
 subplot(2,1,2);
@@ -74,12 +74,12 @@ axis([495 515 -1 11]);
 figure(4);
 subplot(2,1,1);
 plot( ...
-    h7.time, h7.signals.values, ... % Füllstand
+    h7.time, h7.signals.values, ... % Fuellstand
     r7.time, r7.signals.values);    % Sollstand
-legend('Füllstand [cm]', 'Sollstand [cm]');
+legend('Fuellstand [cm]', 'Sollstand [cm]');
 xlabel('Zeit [t]');
-ylabel('Füllstand [cm]');
-title('Sprungantwort - Überschwingen');
+ylabel('Fuellstand [cm]');
+title('Sprungantwort - Ueberschwingen');
 axis([490 690 12.45 12.55]);
 
 subplot(2,1,2);
