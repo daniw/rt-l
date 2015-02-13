@@ -53,4 +53,51 @@ Mit den oben genannten Einstellregeln ergeben sich die folgenden Werte
 	\end{array}
 \]
 
+\subsection{Messdaten}
 
+\begin{figure}[h!]
+	\centering
+	\begin{subfigure}{0.475\textwidth}
+		\includegraphics[width=1\textwidth]{09/step_noload.pdf}
+		\caption{Ohne Bremse ($\alpha = 0$)}
+	\end{subfigure}
+	\hfill{}
+	\begin{subfigure}{0.475\textwidth}
+		\includegraphics[width=1\textwidth]{09/step_load.pdf}
+		\caption{Ohne Bremse ($\alpha = 0$)}
+	\end{subfigure}
+	\caption{Sprungantworten des PID-Reglers nach Kuhn}
+\end{figure}
+
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{l c c c c}
+		Eigenschaft
+			& Spezifikation
+			& $\alpha = 0$
+			& $\alpha = 0.5$
+			& Einheit \\
+		\hline
+		Genauigkeit (mean)
+			& 100
+			& 100
+			& 100
+			& \% \\
+		Anregelzeit (0-99\%)
+			& $0.8$
+			& 0.22
+			& 0.3
+			& $\si{\second}$ \\
+		Überschwingen
+			& $15$
+			& 20.45 
+			& 5.41 
+			& \% \\
+		Einschwingzeit
+			& $2$
+			& n.a. 
+			& n.a.
+			& $\si{\second}$ \\
+	\end{tabular}
+\end{table}
