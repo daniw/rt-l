@@ -1,2 +1,16 @@
 \section{Lageregelung}
-Für die Lageregelung blieb leder keine Zeit mehr. 
+Die Strecke besteht aus der Strecke für die Geschwindigkeit und einem 
+zusätzlichen Integrator. Das heisst, die Strecke wird mit $\frac{1}{s}$ 
+multipliziert. 
+\[
+    G_1(s) = \frac{1}{ \frac{L \cdot J}{K_\omega} \cdot s^3
+        + \frac{R \cdot J + L \cdot \alpha}{K_\omega} \cdot s^2
+        + \left(\frac{R \cdot \alpha}{K_\omega} + K_\omega\right) \cdot s
+    }
+\]
+Somit ist beim Regler $C(s)$ kein Integrator mehr notwendig, um die Anforderung 
+"'keine stationäre Ungenauigkeit"' zu erfüllen. \\
+Für die Stabilität des Regelkreises wäre ein PI Regler sogar ungünstig, er 
+eine Phasendrehung von $-90~[\si{\degree}]$ unterhalb von $\omega_e$ erzeugt. 
+Um die Lageregelung in Betrieb zu nehmen, blieb leider nach Abschluss der 
+restlichen Messungen keine Zeit mehr. \\
