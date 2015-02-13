@@ -22,7 +22,7 @@ plot(theta_soll.time,theta_soll.signals.values, ...
     theta_half.time,theta_half.signals.values);
 title('Sprungantwort Regler');
 xlabel('Zeit [s]');
-ylabel('Temperatur [Â°]');
-legend('Solltemperatur', 'Sprungantwort 90Â°', 'Sprungantwort 45Â°');
+ylabel('Temperatur [°C]');
+legend('Solltemperatur', 'Sprungantwort 90°', 'Sprungantwort 45°');
 
 print '-dpdf' 'saturation_plot.pdf'
