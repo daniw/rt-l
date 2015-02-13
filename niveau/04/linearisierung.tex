@@ -30,24 +30,40 @@ Linearisierung:
     &=& Q_2 
     - \left. \frac{\partial f}{\partial h_2} \right\rvert_{\bar{h_2}} \cdot \Delta h_2
     - \left. \frac{\partial f}{\partial \alpha_{2}} \right\rvert_{\bar{\alpha_{2}}} \cdot \Delta \alpha_{2}
-    - \left. \frac{\partial f}{\partial \alpha_{22}} \right\rvert_{\bar{\alpha_{22}}} \cdot \Delta \alpha_{22} \\
+    - \left. \frac{\partial f}{\partial \alpha_{22}} \right\rvert_{\bar{\alpha_{22}}} \cdot \Delta \alpha_{22} \\\\
 
-    &=& Q2 \\
-    & & - (h_2 - \bar{h_2}) \cdot \sqrt{2 \cdot g} \cdot (\bar{\alpha_2} \cdot A_L + \bar{\alpha_{22}} \cdot A_V) \\
-    & & - (\alpha_2 - \bar{\alpha_2}) \cdot \bar{h_2} \cdot \sqrt{2 \cdot g} \cdot A_L \\
-    & & - (\alpha_{22} - \bar{\alpha_{22}}) \cdot \bar{h_2} \cdot \sqrt{2 \cdot g} \cdot A_V \\
+    &=& Q_2 
+     - (h_2 - \bar{h_2}) \cdot \sqrt{2 \cdot g} \cdot (\bar{\alpha_2} \cdot A_L + \bar{\alpha_{22}} \cdot A_V) 
+     - (\alpha_2 - \bar{\alpha_2}) \cdot \bar{h_2} \cdot \sqrt{2 \cdot g} \cdot A_L 
+     - (\alpha_{22} - \bar{\alpha_{22}}) \cdot \bar{h_2} \cdot \sqrt{2 \cdot g} \cdot A_V \\\\
 
-    &=& Q2 \cdot \sqrt{2 \cdot g} \cdot ( \\
-    & & - (h_2 - \bar{h_2}) \cdot (\bar{\alpha_2} \cdot A_L + \bar{\alpha_{22}} \cdot A_V) \\
-    & & - (\alpha_2 - \bar{\alpha_2}) \cdot \bar{h_2} \cdot A_L \\
-    & & - (\alpha_{22} - \bar{\alpha_{22}}) \cdot \bar{h_2} \cdot A_V ) \\
+    &=& Q_2 - \sqrt{2 \cdot g} \cdot ( 
+     - (h_2 - \bar{h_2}) \cdot (\bar{\alpha_2} \cdot A_L + \bar{\alpha_{22}} \cdot A_V) 
+     - (\alpha_2 - \bar{\alpha_2}) \cdot \bar{h_2} \cdot A_L 
+     - (\alpha_{22} - \bar{\alpha_{22}}) \cdot \bar{h_2} \cdot A_V ) \\
 \end{array}
 \]
+Arbeitspunkt: 
+\[
+\underbrace{A_T \cdot \frac{d~h_2}{d~t}}_{0}
+    = Q_2 - \sqrt{h_2} \cdot \sqrt{2 \cdot g} \cdot 
+    (\alpha_2 \cdot A_L + \alpha_{22} \cdot A_V)
+\]
+\[
+\sqrt{h_2}
+    = \frac{Q_2}{\sqrt{2 \cdot g} \cdot 
+    (\alpha_2 \cdot A_L + \alpha_{22} \cdot A_V)}
+\]
+\[
+h_2
+    = \left(\frac{Q_2}{\sqrt{2 \cdot g} \cdot 
+    (\alpha_2 \cdot A_L + \alpha_{22} \cdot A_V)}\right)^2
+\]
 Laplace Transformation: 
-\[ h_2          \laplace Y(s) \]
-\[ Q_2          \laplace Y(s) \]
-\[ \alpha_2     \laplace Y(s) \]
-\[ \alpha_{22}  \laplace Y(s) \]
+\[ h_2          \laplace Y(s) \qquad
+    Q_2          \laplace Y(s) \qquad
+    \alpha_2     \laplace Y(s) \qquad
+    \alpha_{22}  \laplace Y(s) \]
 \[ A_T \cdot Y(s) \cdot s = U(s) 
     - Y(s)   \cdot \left(\sqrt{2 \cdot g} \cdot (\bar{\alpha_2} \cdot A_L + \bar{\alpha_{22}} \cdot A_V)\right)
     - V_1(s) \cdot \left(\sqrt{2 \cdot g} \cdot \bar{h_2} \cdot A_L\right)
