@@ -14,6 +14,6 @@
 |  9      | x        |         |      |
 | 10      |          |         | SISO |
 | 11      |          |         | Simulation |
-| 12      |          |         | Plot der Messdaten |
+| 12      |          |         |      |
 | 13      |          |         | Vorsteuerung |
 | 14      |          |         | --- |
