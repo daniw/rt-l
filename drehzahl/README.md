@@ -11,7 +11,7 @@
 |  6      | x        |         |      |
 |  7      | x        |         | Detail Sprungantwort |
 |  8      | x        |         |      |
-|  9      | x        |         | plot der Messdaten |
+|  9      | x        |         |      |
 | 10      |          |         | SISO |
 | 11      |          |         | Simulation |
 | 12      |          |         | Plot der Messdaten |
