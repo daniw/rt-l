@@ -1,0 +1,37 @@
+% load data
+data_l = load('dc_step_20_25_00');
+data_n = load('dc_step_20_25_05');
+
+% plot
+figure(1);
+subplot(2,1,1);
+plot(data_n.Zeit, data_n.Geschwindigkeit);
+legend('Geschwindigkeit [rpm]');
+xlabel('Zeit [s]');
+ylabel('Geschwindigkeit [rpm]');
+title('Schrittantwort ohne Bremse');
+
+subplot(2,1,2);
+plot(data_n.Zeit, data_n.Motorspannung);
+legend('Motorspannung [V]');
+xlabel('Zeit [s]');
+ylabel('Motorspannung [V]');
+
+print -dpdf 'step_noload'
+
+% plot
+figure(1);
+subplot(2,1,1);
+plot(data_n.Zeit, data_n.Geschwindigkeit);
+legend('Geschwindigkeit [rpm]');
+xlabel('Zeit [s]');
+ylabel('Geschwindigkeit [rpm]');
+title('Schrittantwort ohne Bremse');
+
+subplot(2,1,2);
+plot(data_n.Zeit, data_n.Motorspannung);
+legend('Motorspannung [V]');
+xlabel('Zeit [s]');
+ylabel('Motorspannung [V]');
+
+print -dpdf 'step_noload'
