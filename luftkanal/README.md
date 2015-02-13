@@ -10,7 +10,7 @@
 |  5      | x        |         |      |
 |  6      | x        |         |      |
 |  7      | x        |         |      |
-|  8      | x        |         | Beschriftung Achsen |
-|  9      | x        |         | Beschriftung Achsen, Plots nebeneinander |
+|  8      | x        |         |      |
+|  9      | x        |         |      |
 | 10      | x        |         |      |
 | 11      | x        |         |      |
