@@ -37,9 +37,9 @@ subplot(2,1,1);
 plot( ...
     data_g45.Zeit, data_g45.Temperatur, ...
     g45.time, g45.signals.values);
-legend('Messung [째C]', 'Simulation [째C]');
+legend('Messung [캜]', 'Simulation [캜]');
 xlabel('Zeit [t]');
-ylabel('Temperatur [째C]');
+ylabel('Temperatur [캜]');
 title('Sprungantwort');
 subplot(2,1,2);
 plot(data_g45.Zeit, data_g45.Heizung);
@@ -56,9 +56,9 @@ subplot(2,1,1);
 plot( ...
     data_g90.Zeit, data_g90.Temperatur, ...
     g90.time, g90.signals.values);
-legend('Messung [째C]', 'Simulation [째C]');
+legend('Messung [캜]', 'Simulation [캜]');
 xlabel('Zeit [t]');
-ylabel('Temperatur [째C]');
+ylabel('Temperatur [캜]');
 title('Sprungantwort');
 subplot(2,1,2);
 plot(data_g90.Zeit, data_g90.Heizung);
@@ -76,9 +76,9 @@ subplot(2,1,1);
 plot( ...
     data_g45.Zeit, data_g45.Temperatur, ...
     g45.time, g45.signals.values);
-legend('Messung [째C]', 'Simulation [째C]');
+legend('Messung [캜]', 'Simulation [캜]');
 xlabel('Zeit [t]');
-ylabel('Temperatur [째C]');
+ylabel('Temperatur [캜]');
 xlim([4 20]);
 title('Sprungantwort');
 subplot(2,1,2);
@@ -96,9 +96,9 @@ subplot(2,1,1);
 plot( ...
     data_g90.Zeit, data_g90.Temperatur, ...
     g90.time, g90.signals.values);
-legend('Messung [째C]', 'Simulation [째C]');
+legend('Messung [캜]', 'Simulation [캜]');
 xlabel('Zeit [t]');
-ylabel('Temperatur [째C]');
+ylabel('Temperatur [캜]');
 xlim([4 20]);
 title('Sprungantwort');
 subplot(2,1,2);

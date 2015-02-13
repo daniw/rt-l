@@ -22,8 +22,8 @@ line([samplemin/sample samplemax/sample],[thetamax thetamax], 'color', 'r');
 line([samplemin/sample samplemax/sample],[theta63 theta63], 'color', 'g');
 line([samplemin/sample samplemax/sample],[theta86 theta86], 'color', 'g');
 xlabel('Zeit [s]');
-ylabel('Temperatur [째C]');
-title('Sprungantwort 1[V] -> 5[V] @ P = 90째');
+ylabel('Temperatur [캜]');
+title('Sprungantwort 1[V] -> 5[V] @ P = 90�');
 legend('Temperatur', 'Tmin', 'Tmax', '63%', '86%');
 
 subplot(2,1,2);
@@ -55,8 +55,8 @@ line([samplemin/sample samplemax/sample],[thetamax thetamax], 'color', 'r');
 line([samplemin/sample samplemax/sample],[theta63 theta63], 'color', 'g');
 line([samplemin/sample samplemax/sample],[theta86 theta86], 'color', 'g');
 xlabel('Zeit [s]');
-ylabel('Temperatur [째C]');
-title('Sprungantwort 1[V] -> 5[V] @ P = 45째');
+ylabel('Temperatur [캜]');
+title('Sprungantwort 1[V] -> 5[V] @ P = 45�');
 legend('Temperatur', 'Tmin', 'Tmax', '63%', '86%');
 
 subplot(2,1,2);

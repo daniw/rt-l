@@ -11,8 +11,8 @@ plot( ...
     data_full.Zeit, ...
     data_full.Solltemperatur);
 xlabel('Zeit [s]');
-ylabel('Temperatur [Â°C]');
-title('Regler mit Ventilstellung 90Â°');
+ylabel('Temperatur [°C]');
+title('Regler mit Ventilstellung 90°');
 legend('Temperatur', 'Solltemperatur');
 subplot(2,1,2);
 plot( ...
@@ -20,7 +20,7 @@ plot( ...
     data_full.Heizung);
 xlabel('Zeit [s]');
 ylabel('Heizung [V]');
-title('StellgrÃ¶sse');
+title('Stellgroesse');
 legend('Heizspannung');
 
 print '-dpdf' 'vorsteuerung_full_plot.pdf';
@@ -34,8 +34,8 @@ plot( ...
     data_half.Zeit, ...
     data_half.Solltemperatur);
 xlabel('Zeit [s]');
-ylabel('Temperatur [Â°C]');
-title('Regler mit Ventilstellung 45Â°');
+ylabel('Temperatur [°C]');
+title('Regler mit Ventilstellung 45°');
 legend('Temperatur', 'Solltemperatur');
 subplot(2,1,2);
 plot( ...
@@ -43,7 +43,7 @@ plot( ...
     data_half.Heizung);
 xlabel('Zeit [s]');
 ylabel('Heizung [V]');
-title('StellgrÃ¶sse');
+title('Stellgroesse');
 legend('Heizspannung');
 
 print '-dpdf' 'vorsteuerung_half_plot.pdf';

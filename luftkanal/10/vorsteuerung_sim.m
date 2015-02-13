@@ -1,6 +1,6 @@
 s = tf('s');
 
-% Übertragungsfunktionen
+% Uebertragungsfunktionen
 Kg_full = (35.9-26.31) / (5-1);
 Kg_half = (36.5-27.02) / (5-1);
 
@@ -31,14 +31,14 @@ plot(theta_soll.time,theta_soll.signals.values, ...
     theta_half.time,theta_half.signals.values);
 title('Sprungantwort Regler');
 xlabel('Zeit [s]');
-ylabel('Temperatur [°]');
-legend('Solltemperatur', 'Sprungantwort 90°', 'Sprungantwort 45°');
+ylabel('Temperatur [�C]');
+legend('Solltemperatur', 'Sprungantwort 90�', 'Sprungantwort 45�');
 subplot(2,1,2);
 plot(u_full.time,u_full.signals.values, ...
     u_half.time,u_half.signals.values);
 title('Stellgroesse');
 xlabel('Zeit [s]');
 ylabel('Heizspannung [V]');
-legend('Heizleistung 90°', 'Heizleistung 45°');
+legend('Heizleistung 90�', 'Heizleistung 45�');
 
 print '-dpdf' 'vorsteuerung_plot.pdf'
