@@ -1,15 +1,17 @@
 \section{Test Vorsteuerung}
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.6\textwidth]{11/vorsteuerung_full_plot.pdf}
-    \caption{Sprungantwort mit Ventilstellung 90$^\circ$}
-    \label{fig:11a}
-\end{figure}
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.6\textwidth]{11/vorsteuerung_half_plot.pdf}
-    \caption{Sprungantwort mit Ventilstellung 45$^\circ$}
-    \label{fig:11b}
+    \begin{subfigure}{0.475\textwidth}
+        \includegraphics[width=1\textwidth]{11/vorsteuerung_full_plot.pdf}
+        \caption{Sprungantwort mit Ventilstellung 90$^\circ$}
+        \label{fig:11a}
+    \end{subfigure}
+    \hfill{}
+    \begin{subfigure}{0.475\textwidth}
+        \includegraphics[width=1\textwidth]{11/vorsteuerung_half_plot.pdf}
+        \caption{Sprungantwort mit Ventilstellung 45$^\circ$}
+        \label{fig:11b}
+    \end{subfigure}
 \end{figure}
 \begin{table}[h!]
 	\centering
@@ -29,4 +31,9 @@
 			& $\%$
 	\end{tabular}
 \end{table}
-
+Da die Vorsteuerung nicht mit exakt mit der Strecke übereinstimmt, 
+wird der Endwert nicht mit der Vorsteuerung erreicht. Die Differenz muss
+der Integrator beisteuern. Da dieser in dieser Konfiguration sehr langsam 
+ist, geschieht dieser zweite Ausgleichsvorgang ebenfalls sehr langsam. Die 
+Kurve ist dabei der Sprungantwort in \autoref{fig:03a} und \autoref{fig:03b}
+ähnlich. 
