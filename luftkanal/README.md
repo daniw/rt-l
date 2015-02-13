@@ -6,11 +6,11 @@
 |  1      | x        |         |      |
 |  2      | x        |         |      |
 |  3      | x        |         |      |
-|  4      | x        |         | Vergleich Messung / Simulation |
+|  4      | x        |         |      |
 |  5      | x        |         |      |
-|  6      | x        |         | Antwortzeiten und Überschwingung notieren |
-|  7      | x        |         | Grafiken korrigieren |
+|  6      | x        |         |      |
+|  7      | x        |         |      |
 |  8      | x        |         | Beschriftung Achsen |
 |  9      | x        |         | Beschriftung Achsen, Plots nebeneinander |
 | 10      | x        |         |      |
-| 11      | x        |         | Plots nebeneinander, Fazit |
+| 11      | x        |         |      |
