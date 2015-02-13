@@ -1,0 +1,6 @@
+pdfcrop L5_step_overview_plot.pdf L5_step_overview_plot.pdf
+pdfcrop L5_step_overshoot_plot.pdf L5_step_overshoot_plot.pdf
+pdfcrop L7_step_overview_plot.pdf L7_step_overview_plot.pdf
+pdfcrop L7_step_overshoot_plot.pdf L7_step_overshoot_plot.pdf
+
+pdfcrop model.pdf model.pdf
