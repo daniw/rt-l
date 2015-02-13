@@ -59,6 +59,6 @@ subplot(2,1,2);
 plot(Q2.time,Q2.signals.values);
 xlabel('Time [s]');
 ylabel('Pumpspannung [V]');
-title('Stellgrösse');
+title('Stellgroesse');
 print '-dpdf' 'sim_0.pdf';
 

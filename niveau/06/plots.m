@@ -11,6 +11,7 @@ ylabel('Füllstand [cm]');
 title('Sprungantwort 5[V] -> 5.5[V]')
 subplot(2,1,2);
 plot(data_low.Zeit, data_low.PumpeRechts);
+title('Stellgroesse');
 xlabel('Zeit [t]');
 ylabel('Pumpenspannung [V]');
 ylim([4.5 6]);
@@ -26,6 +27,7 @@ ylabel('Füllstand [cm]');
 title('Sprungantwort 7[V] -> 8[V]')
 subplot(2,1,2);
 plot(data_high.Zeit, data_high.PumpeRechts);
+title('Stellgroesse');
 xlabel('Zeit [t]');
 ylabel('Pumpenspannung [V]');
 ylim([6 9]);
