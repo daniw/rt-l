@@ -11,8 +11,8 @@ plot( ...
     data_full.Zeit(600:1400), ...
     data_full.Solltemperatur(600:1400));
 xlabel('Zeit [s]');
-ylabel('Temperatur [Â°C]');
-title('Regler mit Ventilstellung 90Â°');
+ylabel('Temperatur [°C]');
+title('Regler mit Ventilstellung 90°');
 legend('Temperatur', 'Solltemperatur');
 subplot(2,1,2);
 plot( ...
@@ -20,7 +20,7 @@ plot( ...
     data_full.Heizung(600:1400));
 xlabel('Zeit [s]');
 ylabel('Heizung [V]');
-title('Regler mit Ventilstellung 90Â°');
+title('Regler mit Ventilstellung 90°');
 legend('Heizspannung');
 
 print '-dpdf' 'pi_siso_full_plot.pdf';
@@ -34,8 +34,8 @@ plot( ...
     data_half.Zeit(600:1400), ...
     data_half.Solltemperatur(600:1400));
 xlabel('Zeit [s]');
-ylabel('Temperatur [Â°C]');
-title('Regler mit Ventilstellung 45Â°');
+ylabel('Temperatur [°C]');
+title('Regler mit Ventilstellung 45°');
 legend('Temperatur', 'Solltemperatur');
 subplot(2,1,2);
 plot( ...
@@ -43,7 +43,7 @@ plot( ...
     data_half.Heizung(600:1400));
 xlabel('Zeit [s]');
 ylabel('Heizung [V]');
-title('Regler mit Ventilstellung 45Â°');
+title('Regler mit Ventilstellung 45°');
 legend('Heizspannung');
 
 print '-dpdf' 'pi_siso_half_plot.pdf';
