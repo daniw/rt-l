@@ -8,7 +8,7 @@
 |  3      |          |         | zeichnen und simulieren |
 |  4      | x        |         |      |
 |  5      | x        |         |      |
-|  6      | x        |         | plots splitten |
+|  6      | x        |         |      |
 |  7      | x        |         | Detail Sprungantwort |
 |  8      | x        |         |      |
 |  9      | x        |         | plot der Messdaten |
