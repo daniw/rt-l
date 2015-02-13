@@ -16,6 +16,7 @@ plot(data_noload.Zeit,data_noload.Motorspannung*100);
 xlabel('Zeit [s]');
 ylabel('Motorspannung [100 V]');
 legend('Motorspannung (100:1)');
+title('Stellgroesse');
 ylim([400 1600]);
 
 print '-dpdf' 'step_plot_noload.pdf'
@@ -33,6 +34,7 @@ plot(data_load.Zeit,data_load.Motorspannung*100);
 legend('Motorspannung (100:1)');
 xlabel('Zeit [s]');
 ylabel('Motorspannung [100 V]');
+title('Stellgroesse');
 ylim([400 1600]);
 
 print '-dpdf' 'step_plot_load.pdf'

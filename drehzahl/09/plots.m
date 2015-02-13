@@ -19,6 +19,7 @@ plot(data_n.Zeit, data_n.Motorspannung);
 legend('Motorspannung [V]');
 xlabel('Zeit [s]');
 ylabel('Motorspannung [V]');
+title('Stellgroesse');
 axis([4 8 5 30]);
 
 print -dpdf 'step_noload'
@@ -40,6 +41,7 @@ plot(data_l.Zeit, data_l.Motorspannung);
 legend('Motorspannung [V]');
 xlabel('Zeit [s]');
 ylabel('Motorspannung [V]');
+title('Stellgroesse');
 axis([4 8 5 30]);
 
 print -dpdf 'step_load'
